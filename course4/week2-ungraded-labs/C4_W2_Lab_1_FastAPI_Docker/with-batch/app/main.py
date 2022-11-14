@@ -9,6 +9,7 @@ app = FastAPI(title="Predicting Wine Class with batching")
 
 # Represents a batch of wines
 class Wine(BaseModel):
+    # the order of feature matters
     batches: List[conlist(item_type=float, min_items=13, max_items=13)]
 
 

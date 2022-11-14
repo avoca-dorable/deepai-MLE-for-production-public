@@ -23,6 +23,7 @@ class Wine(BaseModel):
     proline: float
 
 
+# the function is run at the startup of the server. This gives you some flexibility if you need some custom logic to be triggered right when the server starts.
 @app.on_event("startup")
 def load_clf():
     # Load classifier from pickle file
